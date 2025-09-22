@@ -3,18 +3,19 @@
 [![GitHub Release](https://img.shields.io/github/v/release/khcrysalis/antrag?include_prereleases)](https://github.com/khcrysalis/protokolle/releases)
 [![GitHub License](https://img.shields.io/github/license/khcrysalis/antrag?color=%23C96FAD)](https://github.com/khcrysalis/protokolle/blob/main/LICENSE)
 
+| ![Preview Image](image.jpeg) |
+| :--------------------------: |
+
 An app to list iOS/iPadOS app's, for stock devices. This app uses [idevice](https://github.com/jkcoxson/idevice) and lockdownd pairing to retrieve installed apps.
 
-### Features
+## Features
 
-- List "System" & "User" apps
-- Basic filtering
+- List, open, and delete "System" & "User" apps.
+- View entitlements, signing identity, and additional misc info.
 
 ## Download
 
-<a href="https://apps.apple.com/us/app/antrag/id6747074491" target="_blank" rel="noopener noreferrer">
-    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" style="width: 200px; height: auto;">
-</a>
+Visit [releases](https://github.com/khcrysalis/Antrag/releases) and get the latest `.ipa`.
 
 ## How does it work?
 
