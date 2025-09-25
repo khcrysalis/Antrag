@@ -3,12 +3,12 @@
 [![GitHub Release](https://img.shields.io/github/v/release/khcrysalis/antrag?include_prereleases)](https://github.com/khcrysalis/protokolle/releases)
 [![GitHub License](https://img.shields.io/github/license/khcrysalis/antrag?color=%23C96FAD)](https://github.com/khcrysalis/protokolle/blob/main/LICENSE)
 
-| ![Preview Image](image.jpeg) |
+| ![Preview Image](demo.jpeg) |
 | :--------------------------: |
 
 An app to list iOS/iPadOS app's, for stock devices. This app uses [idevice](https://github.com/jkcoxson/idevice) and lockdownd pairing to retrieve installed apps.
 
-## Features
+### Features
 
 - List, open, and delete "System" & "User" apps.
 - View entitlements, signing identity, and additional misc info.
