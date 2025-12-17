@@ -93,6 +93,10 @@ class ATAppInfoHeaderView: UIView {
 		])
 		
 		openButton.addTarget(self, action: #selector(openButtonTapped), for: .touchUpInside)
+		
+		iconImageView.isUserInteractionEnabled = true
+		let interaction = UIContextMenuInteraction(delegate: self)
+		iconImageView.addInteraction(interaction)
 	}
 	
 	@objc private func openButtonTapped() {
@@ -114,6 +118,45 @@ class ATAppInfoHeaderView: UIView {
 					self.iconImageView.image = image
 				}
 			}
+		}
+	}
+}
+
+extension ATAppInfoHeaderView: UIContextMenuInteractionDelegate {
+	func contextMenuInteraction(
+		_ interaction: UIContextMenuInteraction,
+		configurationForMenuAtLocation location: CGPoint
+	) -> UIContextMenuConfiguration? {
+		
+		guard let image = iconImageView.image else { return nil }
+		
+		return UIContextMenuConfiguration(identifier: nil, previewProvider: {
+			let vc = UIViewController()
+			
+			let imageView = UIImageView(image: image)
+			imageView.contentMode = .scaleAspectFit
+			imageView.translatesAutoresizingMaskIntoConstraints = false
+			
+			vc.view.addSubview(imageView)
+			vc.view.backgroundColor = .clear
+			
+			NSLayoutConstraint.activate([
+				imageView.topAnchor.constraint(equalTo: vc.view.topAnchor),
+				imageView.bottomAnchor.constraint(equalTo: vc.view.bottomAnchor),
+				imageView.leadingAnchor.constraint(equalTo: vc.view.leadingAnchor),
+				imageView.trailingAnchor.constraint(equalTo: vc.view.trailingAnchor)
+			])
+			
+			return vc
+		}) { _ in
+			let saveAction = UIAction(
+				title: .localized("Save Image"),
+				image: UIImage(systemName: "square.and.arrow.down")
+			) { _ in
+				UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+			}
+			
+			return UIMenu(children: [saveAction])
 		}
 	}
 }

@@ -331,6 +331,17 @@
         }
       }
     },
+    "Save Image" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save Image"
+          }
+        }
+      }
+    },
     "SDK Version Built with" : {
       "extractionState" : "manual",
       "localizations" : {
