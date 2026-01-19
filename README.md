@@ -20,7 +20,7 @@ Visit [releases](https://github.com/khcrysalis/Antrag/releases) and get the late
 ## How does it work?
 
 - Establish a heartbeat with a TCP provider (the app will need this for later).
-  - For it to be successful, we need a pairing file from [JitterbugPair](https://github.com/osy/Jitterbug/releases) and a [VPN](https://apps.apple.com/us/app/stosvpn/id6744003051).
+  - For it to be successful, we need a pairing file from [PlumeImpactor](https://github.com/khcrysalis/Impactor?tab=readme-ov-file#pairing-file) and a [VPN](https://apps.apple.com/us/app/localdevvpn/id6755608044).
 - When preparing the list, we need to establish another connection but for `installation_proxy` using our heartbeat provider and client handle.
 - Then we can use `installation_proxy_get_apps` using that handle to list applications.
 
